@@ -41,19 +41,9 @@
                 <li><a href="#moments-section">Moments</a></li>
                 <li><a href="#surprises-section">Surprises</a></li>
                 <li><a href="#memories-section">Memories</a></li>
-                <li><a href="#soundtrack-section">Soundtrack</a></li>
             </ul>
 
             <div class="nav-action">
-                <button type="button" class="audio-quick-toggle" id="quickAudioToggle" title="Play / Pause Soundtrack" aria-label="Toggle Soundtrack">
-                    <span class="sound-waves" id="soundWaves">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </span>
-                    <span class="audio-toggle-text">Music</span>
-                </button>
-
                 <!-- Mobile Hamburger Menu Button -->
                 <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="mobileNavDrawer">
                     <span class="hamburger-line"></span>
@@ -79,7 +69,6 @@
             <li><a href="#moments-section" class="drawer-link"><span>03</span> Moments</a></li>
             <li><a href="#surprises-section" class="drawer-link"><span>04</span> Surprises</a></li>
             <li><a href="#memories-section" class="drawer-link"><span>05</span> Memories</a></li>
-            <li><a href="#soundtrack-section" class="drawer-link"><span>06</span> Soundtrack</a></li>
         </ul>
         <div class="drawer-footer">
             <p>Made with love ❤️ for your special day</p>
@@ -107,7 +96,7 @@
                     </h1>
 
                     <p class="hero-subtext">
-                        A dedicated digital sanctuary honoring our journey, your infectious smile, and every beautiful memory we have shared together. Welcome to your special birthday story.
+                        This little space is all about you, our friendship, your beautiful smile, and all the memories we’ve made together. Welcome to your special birthday story. ❤️
                     </p>
 
                     <div class="hero-actions">
@@ -186,7 +175,7 @@
         <section class="editorial-section" id="moments-section">
             <div class="section-header center-aligned moments-header">
                 <span class="section-pretitle">Chapter II • Portrait Gallery</span>
-                <h2 class="section-title">Beautiful Moments <em>With You</em> ❤️</h2>
+                <h2 class="section-title">Beautiful Moments <em>of You</em> ❤️</h2>
                 <p class="section-description">Every portrait carries a story, a shared glance, and an unforgettable memory.</p>
             </div>
 
@@ -557,68 +546,7 @@
 
 
         <!-- ==================================================================
-             CHAPTER V: The Bespoke Music Experience
-             ================================================================== -->
-        <section class="editorial-section" id="soundtrack-section">
-            <div class="section-header center-aligned">
-                <span class="section-pretitle">Chapter V • Melody</span>
-                <h2 class="section-title">The Birthday <em>Soundtrack</em> 🎵</h2>
-                <p class="section-description">A celebratory melody to accompany your special day.</p>
-            </div>
-
-            <div class="music-experience-card">
-                
-                <!-- Vinyl Disc Animation -->
-                <div class="vinyl-deck" id="vinylDeck" aria-hidden="true">
-                    <div class="vinyl-grooves"></div>
-                    <div class="vinyl-center-label">🎶</div>
-                </div>
-
-                <!-- Player Controls -->
-                <div class="music-player-controls">
-                    
-                    <div class="track-meta">
-                        <div>
-                            <h3 class="track-title">Happy Birthday Song</h3>
-                            <p class="track-artist">Playing with love just for you</p>
-                        </div>
-                        <span class="track-badge">Special Edition</span>
-                    </div>
-
-                    <!-- Scrubber Timeline -->
-                    <div class="scrubber-container">
-                        <span class="time-label" id="currentTime">0:00</span>
-                        <div class="progress-track" id="progressTrack" role="slider" aria-label="Audio scrubber" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
-                            <div class="progress-fill" id="progressFill"></div>
-                        </div>
-                        <span class="time-label" id="durationTime">--:--</span>
-                    </div>
-
-                    <!-- Action Controls -->
-                    <div class="player-actions-row">
-                        <button type="button" class="main-play-btn" id="mainPlayBtn" title="Play Melody" aria-label="Play or Pause Song">▶</button>
-                        
-                        <div class="volume-control">
-                            <button type="button" class="volume-btn" id="volumeBtn" title="Toggle Mute" aria-label="Toggle Mute">🔊</button>
-                            <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.05" value="0.8" aria-label="Volume Slider">
-                        </div>
-                    </div>
-
-                    <!-- Keep Original Audio Element Accessible & Preserved -->
-                    <audio id="birthdayAudio" class="visually-hidden-audio" preload="auto">
-                        <source src="{{ url_for('static', filename='music/Puttina-Roju-Jejelu-Chitti-Papayi.mp3') }}" type="audio/mpeg">
-                        <source src="{{ url_for('static', filename='music/birthday.mp3') }}" type="audio/mpeg">
-                        Your browser does not support audio playback.
-                    </audio>
-
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- ==================================================================
-             CHAPTER VI: Epilogue & Final Birthday Wish
+             CHAPTER V: Epilogue & Final Birthday Wish
              ================================================================== -->
         <footer class="epilogue-section" id="epilogue-section">
             <div class="epilogue-editorial-showcase">

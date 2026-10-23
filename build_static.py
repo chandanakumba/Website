@@ -36,11 +36,11 @@ def build():
         f.write(html_content)
     print("✓ Created dist/index.html")
 
-    # 5. Copy static folder (images, music, style.css, script.js) into dist/
+    # 5. Copy static folder (images, style.css, script.js) into dist/
     src_static = os.path.join(BASE_DIR, 'static')
     dst_static = os.path.join(DIST_DIR, 'static')
     shutil.copytree(src_static, dst_static)
-    print("✓ Copied static assets (images, music, css, js) to dist/static/")
+    print("✓ Copied static assets (images, css, js) to dist/static/")
 
     total_files = sum(len(files) for _, _, files in os.walk(DIST_DIR))
     print(f"\nSUCCESS! Build complete ({total_files} files in 'dist/'). Ready for free deployment!")
