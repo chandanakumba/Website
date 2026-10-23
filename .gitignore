@@ -1,0 +1,18 @@
+# Python Virtual Environment
+venv/
+env/
+.venv/
+
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / Build output
+dist/
+build/
+*.egg-info/
+
+# System / OS
+.DS_Store
+Thumbs.db

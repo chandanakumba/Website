@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#0b0c10">
+    <meta name="description" content="A special personal birthday celebration website filled with beautiful memories, heartfelt words, and interactive surprises.">
+    <title>Happy Birthday Dear! ❤️ | An Editorial Celebration</title>
+    
+    <!-- Google Fonts for Editorial Luxury Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Editorial Design System Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Ambient Glowing Backdrop -->
+    <div class="ambient-glow-layer" aria-hidden="true">
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
+        <div class="glow-orb glow-orb-3"></div>
+    </div>
+    
+    <!-- Subtle Cinematic Film Grain -->
+    <div class="grain-overlay" aria-hidden="true"></div>
+
+    <!-- Minimal Sticky Navigation -->
+    <nav class="top-nav" aria-label="Main Navigation">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-brand">
+                <span class="brand-dot"></span>
+                <span>Celebration</span>
+            </a>
+            
+            <!-- Desktop Nav Links -->
+            <ul class="nav-links">
+                <li><a href="#letter-section">The Note</a></li>
+                <li><a href="#moments-section">Moments</a></li>
+                <li><a href="#surprises-section">Surprises</a></li>
+                <li><a href="#memories-section">Memories</a></li>
+                <li><a href="#soundtrack-section">Soundtrack</a></li>
+            </ul>
+
+            <div class="nav-action">
+                <button type="button" class="audio-quick-toggle" id="quickAudioToggle" title="Play / Pause Soundtrack" aria-label="Toggle Soundtrack">
+                    <span class="sound-waves" id="soundWaves">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                    <span class="audio-toggle-text">Music</span>
+                </button>
+
+                <!-- Mobile Hamburger Menu Button -->
+                <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="mobileNavDrawer">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Slide-Out Drawer Navigation -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+        <div class="drawer-header">
+            <div class="drawer-brand">
+                <span class="brand-dot"></span>
+                <span>Birthday Celebration</span>
+            </div>
+            <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close Menu">✕</button>
+        </div>
+        <ul class="drawer-links">
+            <li><a href="#hero" class="drawer-link"><span>01</span> Home</a></li>
+            <li><a href="#letter-section" class="drawer-link"><span>02</span> The Note</a></li>
+            <li><a href="#moments-section" class="drawer-link"><span>03</span> Moments</a></li>
+            <li><a href="#surprises-section" class="drawer-link"><span>04</span> Surprises</a></li>
+            <li><a href="#memories-section" class="drawer-link"><span>05</span> Memories</a></li>
+            <li><a href="#soundtrack-section" class="drawer-link"><span>06</span> Soundtrack</a></li>
+        </ul>
+        <div class="drawer-footer">
+            <p>Made with love ❤️ for your special day</p>
+        </div>
+    </div>
+    <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+    <div class="page-container">
+
+        <!-- ==================================================================
+             HERO SECTION: Editorial Opening Experience
+             ================================================================== -->
+        <header class="hero-section" id="hero">
+            <div class="hero-editorial-grid">
+                
+                <div class="hero-content">
+                    <div class="tag-capsule">
+                        <span>✨</span>
+                        <span>Celebrating The Extraordinary You</span>
+                    </div>
+                    
+                    <h1 class="hero-heading">
+                        Happy Birthday, <br>
+                        <em>Dear.</em>
+                    </h1>
+
+                    <p class="hero-subtext">
+                        A dedicated digital sanctuary honoring our journey, your infectious smile, and every beautiful memory we have shared together. Welcome to your special birthday story.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#letter-section" class="btn-hero-primary">
+                            <span>Begin The Journey</span>
+                            <span>→</span>
+                        </a>
+                        <a href="#moments-section" class="btn-hero-ghost">
+                            <span>View Photographs</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-photo-showcase">
+                        <div class="photo-card-halo"></div>
+                        <div class="photo-card-inner">
+                            <div class="photo-frame">
+                                <img src="{{ url_for('static', filename='images/hero-photo.jpg') }}" alt="Birthday Star" loading="eager" width="652" height="1337">
+                             
+                            </div>
+                        </div>
+
+                     
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+
+        <!-- ==================================================================
+             CHAPTER I: The Personal Letter / Note
+             ================================================================== -->
+        <section class="editorial-section" id="letter-section">
+            <div class="section-header center-aligned">
+                <span class="section-pretitle">Chapter I • Sincere Words</span>
+                <h2 class="section-title">A Letter Written <em>For You</em></h2>
+                <p class="section-description">A quiet moment amidst the celebration to say what matters most.</p>
+            </div>
+
+            <div class="letter-envelope-wrapper">
+                <article class="editorial-letter">
+                    <div class="letter-top-meta">
+                        <span class="letter-date">A Special Day • Dedicated With Love</span>
+                        <div class="letter-wax-stamp" aria-hidden="true">💌</div>
+                    </div>
+
+                    <h3 class="letter-salutation">Dearest,</h3>
+
+                    <p class="letter-body">
+                        Birthdays are milestones not just to mark another year passing, but to pause and truly appreciate <strong>the light you bring into every room you step into</strong>. Your kindness, your spirit, and your presence make the world remarkably warmer.
+                    </p>
+
+                    <p class="letter-body">
+                        Thank you for every shared laugh, every quiet understanding, and every unforgettable memory we've built. I hope today greets you with the same genuine joy and warmth that you so effortlessly give to everyone around you.
+                    </p>
+
+                    <p class="letter-body">
+                        May the coming year unfold with peaceful mornings, exhilarating adventures, and dreams coming true one by one.
+                    </p>
+
+                    <div class="letter-signoff">
+                        <span>With my deepest affection,</span>
+                        <span class="handwriting">Happy Birthday Always ❤️</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+
+        <!-- ==================================================================
+             CHAPTER II: Beautiful Moments With You (7 Photos Curated Flow)
+             ================================================================== -->
+        <section class="editorial-section" id="moments-section">
+            <div class="section-header center-aligned moments-header">
+                <span class="section-pretitle">Chapter II • Portrait Gallery</span>
+                <h2 class="section-title">Beautiful Moments <em>With You</em> ❤️</h2>
+                <p class="section-description">Every portrait carries a story, a shared glance, and an unforgettable memory.</p>
+            </div>
+
+            <div class="moments-curated-flow">
+                
+                <!-- Curated Split: Feature Left + Diptych Right -->
+                <div class="moments-split-showcase">
+                    
+                    <!-- Feature Hero Card: friend1.jpg -->
+                    <div class="editorial-photo-card split-hero-tall" data-caption="The Radiant Smile — Beautiful Moments">
+                        <div class="photo-wrapper">
+                            <img src="{{ url_for('static', filename='images/friend1.jpg') }}" alt="Beautiful Moment 1" loading="lazy" width="720" height="1280">
+                        </div>
+                        <div class="photo-caption-bar">
+                            <div class="photo-caption-info">
+                                <span class="tag">Featured Portrait</span>
+                                <h3 class="title">Radiant & Graceful</h3>
+                            </div>
+                            <div class="lightbox-trigger-icon" title="View Fullscreen">⤢</div>
+                        </div>
+                    </div>
+
+                    <!-- Diptych Column: friend2.jpg & friend6.jpg -->
+                    <div class="split-diptych-col">
+                        
+                        <div class="editorial-photo-card diptych-half" data-caption="Moments in Time — Cherished Laughter">
+                            <div class="photo-wrapper">
+                                <img src="{{ url_for('static', filename='images/friend2.jpg') }}" alt="Beautiful Moment 2" loading="lazy" width="652" height="1337">
+                            </div>
+                            <div class="photo-caption-bar">
+                                <div class="photo-caption-info">
+                                    <span class="tag">Pure Energy</span>
+                                    <h3 class="title">Laughter & Light</h3>
+                                </div>
+                                <div class="lightbox-trigger-icon" title="View Fullscreen">⤢</div>
+                            </div>
+                        </div>
+
+                        <div class="editorial-photo-card diptych-half" data-caption="Serene Moments — Simply Unforgettable">
+                            <div class="photo-wrapper">
+                                <img src="{{ url_for('static', filename='images/friend6.jpg') }}" alt="Beautiful Moment 6" loading="lazy" width="720" height="1280">
+                            </div>
+                            <div class="photo-caption-bar">
+                                <div class="photo-caption-info">
+                                    <span class="tag">Serenity</span>
+                                    <h3 class="title">Simply Unforgettable</h3>
+                                </div>
+                                <div class="lightbox-trigger-icon" title="View Fullscreen">⤢</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Balanced Quartet: friend3, friend4, friend5, friend7 -->
+                <div class="moments-quartet-grid">
+                    
+                    <div class="editorial-photo-card quartet-card" data-caption="Candor & Warmth">
+                        <div class="photo-wrapper">
+                            <img src="{{ url_for('static', filename='images/friend3.jpg') }}" alt="Beautiful Moment 3" loading="lazy" width="480" height="640">
+                        </div>
+                        <div class="photo-caption-bar">
+                            <div class="photo-caption-info">
+                                <span class="tag">Story</span>
+                                <h3 class="title">Warmth</h3>
+                            </div>
+                            <div class="lightbox-trigger-icon" title="View Fullscreen">⤢</div>
+                        </div>
+                    </div>
+
+                    <div class="editorial-photo-card quartet-card" data-caption="Timeless Memories">
+                        <div class="photo-wrapper">
+                            <img src="{{ url_for('static', filename='images/friend4.jpg') }}" alt="Beautiful Moment 4" loading="lazy" width="480" height="640">
+                        </div>
+                        <div class="photo-caption-bar">
+                            <div class="photo-caption-info">
+                                <span class="tag">Story</span>
+                                <h3 class="title">Timeless</h3>
+                            </div>
+                            <div class="lightbox-trigger-icon" title="View Fullscreen">⤢</div>
+                        </div>
+                    </div>
+
+                    <div class="editorial-photo-card quartet-card" data-caption="Gentle Spirits">
+                        <div class="photo-wrapper">
+                            <img src="{{ url_for('static', filename='images/friend5.jpg') }}" alt="Beautiful Moment 5" loading="lazy" width="480" height="640">
+                        </div>
+                        <div class="photo-caption-bar">
+                            <div class="photo-caption-info">
+                                <span class="tag">Story</span>
+                                <h3 class="title">Gentle</h3>
+                            </div>
+                            <div class="lightbox-trigger-icon" title="View Fullscreen">⤢</div>
+                        </div>
+                    </div>
+
+                    <div class="editorial-photo-card quartet-card" data-caption="Golden Times">
+                        <div class="photo-wrapper">
+                            <img src="{{ url_for('static', filename='images/friend7.jpg') }}" alt="Beautiful Moment 7" loading="lazy" width="480" height="640">
+                        </div>
+                        <div class="photo-caption-bar">
+                            <div class="photo-caption-info">
+                                <span class="tag">Story</span>
+                                <h3 class="title">Golden</h3>
+                            </div>
+                            <div class="lightbox-trigger-icon" title="View Fullscreen">⤢</div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ==================================================================
+             CHAPTER III: Interactive Surprise Section
+             ================================================================== -->
+        <section class="editorial-section" id="surprises-section">
+            <div class="section-header center-aligned">
+                <span class="section-pretitle">Chapter III • Interactive Gifts</span>
+                <h2 class="section-title">Two Surprises <em>Waiting For You</em></h2>
+                <p class="section-description">Select an envelope to reveal custom birthday thoughts crafted specifically for you.</p>
+            </div>
+
+            <div class="surprises-editorial-wrapper">
+                
+                <div class="surprise-buttons-deck">
+                    
+                    <!-- Button 1: Click Me ❤️ (Preserves onclick="showMessage()") -->
+                    <div class="surprise-interactive-card card-theme-rose" onclick="showMessage()" role="button" tabindex="0">
+                        <div class="interactive-card-inner">
+                            <div class="card-top-icon">❤️</div>
+                            <h3 class="card-title">Click Me</h3>
+                            <p class="card-hint">A personal reminder of how much you mean to me.</p>
+                            <div class="card-action-label">
+                                <span>Reveal Message</span> <span>→</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Button 2: Another Surprise 💙 (Preserves onclick="showSurprise()") -->
+                    <div class="surprise-interactive-card card-theme-blue" onclick="showSurprise()" role="button" tabindex="0">
+                        <div class="interactive-card-inner">
+                            <div class="card-top-icon">💙</div>
+                            <h3 class="card-title">Another Surprise</h3>
+                            <p class="card-hint">A heartfelt wish dedicated to your upcoming year.</p>
+                            <div class="card-action-label">
+                                <span>Unlock Wish</span> <span>→</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Reveal Display Box (Maintains exact IDs: message, love, birthdayMessage) -->
+                <div class="reveal-display-stage" id="surpriseBox">
+                    <div class="empty-state-hint">
+                        <span class="hint-icon">✨</span>
+                        <p>Choose an interactive card above to view your message</p>
+                    </div>
+
+                    <div class="revealed-content">
+                        <p id="message"></p>
+                        <h3 id="love"></h3>
+                        <p id="birthdayMessage"></p>
+
+                        <!-- 4 WEIRD PHOTOS CONTAINER (Revealed through "Another Surprise" button) -->
+                        <div class="weird-surprise-section" id="weirdSurpriseSection" aria-hidden="true">
+                            <div class="weird-badge-banner">
+                                <span class="weird-emoji"></span>
+                                <span class="weird-badge-title">Wait... Look what I found! </span>
+                                <span class="weird-emoji"></span>
+                            </div>
+                            
+                            <div class="weird-photos-deck">
+                                <div class="weird-photo-card weird-card-1" data-caption="Wait... what is this?! 😂">
+                                    <div class="weird-img-frame">
+                                        <img src="{{ url_for('static', filename='images/weird1.jpg') }}" alt="Funny moment 1" loading="lazy" width="480" height="640">
+                                    </div>
+                                    <span class="weird-reaction-pill">Andhagatthe</span>
+                                </div>
+
+                                <div class="weird-photo-card weird-card-2" data-caption="Unfiltered perfection 💀">
+                                    <div class="weird-img-frame">
+                                        <img src="{{ url_for('static', filename='images/weird2.jpg') }}" alt="Funny moment 2" loading="lazy" width="480" height="640">
+                                    </div>
+                                    <span class="weird-reaction-pill">Cringe</span>
+                                </div>
+
+                                <div class="weird-photo-card weird-card-3" data-caption="No words needed 🤣">
+                                    <div class="weird-img-frame">
+                                        <img src="{{ url_for('static', filename='images/weird3.jpg') }}" alt="Funny moment 3" loading="lazy" width="480" height="640">
+                                    </div>
+                                    <span class="weird-reaction-pill">Model</span>
+                                </div>
+
+                                <div class="weird-photo-card weird-card-4" data-caption="Best blooper ever 👀">
+                                    <div class="weird-img-frame">
+                                        <img src="{{ url_for('static', filename='images/weird4.jpg') }}" alt="Funny moment 4" loading="lazy" width="480" height="640">
+                                    </div>
+                                    <span class="weird-reaction-pill">Nibbi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ==================================================================
+             CHAPTER IV: "Our Beautiful Memories" (10 Photos Story Mosaic)
+             ================================================================== -->
+        <section class="editorial-section" id="memories-section">
+            <div class="section-header">
+                <span class="section-pretitle">Chapter IV • Memory Lane</span>
+                <h2 class="section-title">Our Beautiful Memories ❤️</h2>
+                <p class="section-description">Every moment with you has become a beautiful memory that I will always cherish.</p>
+            </div>
+
+            <div class="memories-mosaic-grid">
+                
+                <!-- memory1.jpg (Cherished Memory 1 - Perfectly aligned twin feature) -->
+                <div class="editorial-photo-card memory-duo-card" data-caption="Every shared laugh is etched in time">
+                    <div class="photo-wrapper">
+                        <img src="{{ url_for('static', filename='images/memory1.jpg') }}" alt="Cherished Memory 1" class="memory-1-img" loading="lazy" width="1204" height="1600">
+                    </div>
+                    <div class="photo-caption-bar">
+                        <div class="photo-caption-info">
+                            <span class="tag">Treasured</span>
+                            <h3 class="title">A Heartwarming Day</h3>
+                        </div>
+                        <div class="lightbox-trigger-icon" title="View Fullscreen">⤢</div>
+                    </div>
+                </div>
+
+                <!-- memory2.jpg (Cherished Memory 2 - Perfectly aligned twin feature) -->
+                <div class="editorial-photo-card memory-duo-card" data-caption="Panoramic joy and golden memories">
+                    <div class="photo-wrapper">
+                        <img src="{{ url_for('static', filename='images/memory2.jpg') }}" alt="Cherished Memory 2" class="memory-2-img" loading="lazy" width="1600" height="1200">
+                    </div>
+                    <div class="photo-caption-bar">
+                        <div class="photo-caption-info">
+                            <span class="tag">Unforgettable</span>
+                            <h3 class="title">Golden Moments</h3>
+                        </div>
+                        <div class="lightbox-trigger-icon" title="View Fullscreen">⤢</div>
+                    </div>
+                </div>
+
+                <!-- memory3.jpg (Tall Portrait) -->
+                <div class="editorial-photo-card span-4" data-caption="A smile that illuminates every room">
+                    <div class="photo-wrapper">
+                        <img src="{{ url_for('static', filename='images/memory3.jpg') }}" alt="Cherished Memory 3" loading="lazy" width="640" height="1312">
+                    </div>
+                    <div class="photo-caption-bar">
+                        <div class="photo-caption-info">
+                            <span class="tag">Memory</span>
+                            <h3 class="title">Pure Warmth</h3>
+                        </div>
+                        <div class="lightbox-trigger-icon" title="View Fullscreen">⤢</div>
+                    </div>
+                </div>
+
+                <!-- memory4.jpg (SQUARE 648x648) -->
+                <div class="editorial-photo-card span-4-square" data-caption="Capturing the genuine spirit">
+                    <div class="photo-wrapper">
+                        <img src="{{ url_for('static', filename='images/memory4.jpg') }}" alt="Cherished Memory 4" loading="lazy" width="648" height="648">
+                    </div>
+                    <div class="photo-caption-bar">
+                        <div class="photo-caption-info">
+                            <span class="tag">Snapshot</span>
+                            <h3 class="title">Genuine Joy</h3>
+                        </div>
+                        <div class="lightbox-trigger-icon" title="View Fullscreen">⤢</div>
+                    </div>
+                </div>
+
+                <!-- memory5.jpg (Tall Portrait) -->
+                <div class="editorial-photo-card span-4-tall" data-caption="Adventures that made life colorful">
+                    <div class="photo-wrapper">
+                        <img src="{{ url_for('static', filename='images/memory5.jpg') }}" alt="Cherished Memory 5" loading="lazy" width="656" height="1345">
+                    </div>
+                    <div class="photo-caption-bar">
+                        <div class="photo-caption-info">
+                            <span class="tag">Memory</span>
+                            <h3 class="title">Bright Days</h3>
+                        </div>
+                        <div class="lightbox-trigger-icon" title="View Fullscreen">⤢</div>
+                    </div>
+                </div>
+
+                <!-- memory6.jpg -->
+                <div class="editorial-photo-card span-3" data-caption="Simple days turned extraordinary">
+                    <div class="photo-wrapper">
+                        <img src="{{ url_for('static', filename='images/memory6.jpg') }}" alt="Cherished Memory 6" loading="lazy" width="720" height="1280">
+                    </div>
+                    <div class="photo-caption-bar">
+                        <div class="photo-caption-info">
+                            <span class="tag">Story</span>
+                            <h3 class="title">Echoes of Joy</h3>
+                        </div>
+                        <div class="lightbox-trigger-icon" title="View Fullscreen">⤢</div>
+                    </div>
+                </div>
+
+                <!-- memory7.jpg -->
+                <div class="editorial-photo-card span-3" data-caption="Grateful for every single second">
+                    <div class="photo-wrapper">
+                        <img src="{{ url_for('static', filename='images/memory7.jpg') }}" alt="Cherished Memory 7" loading="lazy" width="899" height="1599">
+                    </div>
+                    <div class="photo-caption-bar">
+                        <div class="photo-caption-info">
+                            <span class="tag">Story</span>
+                            <h3 class="title">Grateful</h3>
+                        </div>
+                        <div class="lightbox-trigger-icon" title="View Fullscreen">⤢</div>
+                    </div>
+                </div>
+
+                <!-- memory8.jpg -->
+                <div class="editorial-photo-card span-3" data-caption="Friendship that stands the test of time">
+                    <div class="photo-wrapper">
+                        <img src="{{ url_for('static', filename='images/memory8.jpg') }}" alt="Cherished Memory 8" loading="lazy" width="640" height="1272">
+                    </div>
+                    <div class="photo-caption-bar">
+                        <div class="photo-caption-info">
+                            <span class="tag">Story</span>
+                            <h3 class="title">Enduring Bond</h3>
+                        </div>
+                        <div class="lightbox-trigger-icon" title="View Fullscreen">⤢</div>
+                    </div>
+                </div>
+
+                <!-- memory9.jpg -->
+                <div class="editorial-photo-card span-3" data-caption="Looking back with immense fondness">
+                    <div class="photo-wrapper">
+                        <img src="{{ url_for('static', filename='images/memory9.jpg') }}" alt="Cherished Memory 9" loading="lazy" width="720" height="1280">
+                    </div>
+                    <div class="photo-caption-bar">
+                        <div class="photo-caption-info">
+                            <span class="tag">Story</span>
+                            <h3 class="title">Sweet Reminisce</h3>
+                        </div>
+                        <div class="lightbox-trigger-icon" title="View Fullscreen">⤢</div>
+                    </div>
+                </div>
+
+                <!-- memory10.jpg (Grand Finale Showcase) -->
+                <div class="editorial-photo-card span-12-feature" data-caption="Here is to the past, the present, and all tomorrow holds">
+                    <div class="photo-wrapper">
+                        <img src="{{ url_for('static', filename='images/memory10.jpg') }}" alt="Cherished Memory 10" loading="lazy" width="720" height="1280">
+                    </div>
+                    <div class="photo-caption-bar">
+                        <div class="photo-caption-info">
+                            <span class="tag">Chapter Finale</span>
+                            <h3 class="title">To All Tomorrow Holds ❤️</h3>
+                        </div>
+                        <div class="lightbox-trigger-icon" title="View Fullscreen">⤢</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ==================================================================
+             CHAPTER V: The Bespoke Music Experience
+             ================================================================== -->
+        <section class="editorial-section" id="soundtrack-section">
+            <div class="section-header center-aligned">
+                <span class="section-pretitle">Chapter V • Melody</span>
+                <h2 class="section-title">The Birthday <em>Soundtrack</em> 🎵</h2>
+                <p class="section-description">A celebratory melody to accompany your special day.</p>
+            </div>
+
+            <div class="music-experience-card">
+                
+                <!-- Vinyl Disc Animation -->
+                <div class="vinyl-deck" id="vinylDeck" aria-hidden="true">
+                    <div class="vinyl-grooves"></div>
+                    <div class="vinyl-center-label">🎶</div>
+                </div>
+
+                <!-- Player Controls -->
+                <div class="music-player-controls">
+                    
+                    <div class="track-meta">
+                        <div>
+                            <h3 class="track-title">Happy Birthday Song</h3>
+                            <p class="track-artist">Playing with love just for you</p>
+                        </div>
+                        <span class="track-badge">Special Edition</span>
+                    </div>
+
+                    <!-- Scrubber Timeline -->
+                    <div class="scrubber-container">
+                        <span class="time-label" id="currentTime">0:00</span>
+                        <div class="progress-track" id="progressTrack" role="slider" aria-label="Audio scrubber" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <span class="time-label" id="durationTime">--:--</span>
+                    </div>
+
+                    <!-- Action Controls -->
+                    <div class="player-actions-row">
+                        <button type="button" class="main-play-btn" id="mainPlayBtn" title="Play Melody" aria-label="Play or Pause Song">▶</button>
+                        
+                        <div class="volume-control">
+                            <button type="button" class="volume-btn" id="volumeBtn" title="Toggle Mute" aria-label="Toggle Mute">🔊</button>
+                            <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.05" value="0.8" aria-label="Volume Slider">
+                        </div>
+                    </div>
+
+                    <!-- Keep Original Audio Element Accessible & Preserved -->
+                    <audio id="birthdayAudio" class="visually-hidden-audio" preload="auto">
+                        <source src="{{ url_for('static', filename='music/Puttina-Roju-Jejelu-Chitti-Papayi.mp3') }}" type="audio/mpeg">
+                        <source src="{{ url_for('static', filename='music/birthday.mp3') }}" type="audio/mpeg">
+                        Your browser does not support audio playback.
+                    </audio>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ==================================================================
+             CHAPTER VI: Epilogue & Final Birthday Wish
+             ================================================================== -->
+        <footer class="epilogue-section" id="epilogue-section">
+            <div class="epilogue-editorial-showcase">
+                <!-- Left Side: Large Immersive Photograph (50% Width, Full-Bleed) -->
+                <div class="epilogue-photo-pane" data-caption="Cherished Memories Together ❤️">
+                    <img src="{{ url_for('static', filename='images/final-memory.jpg') }}" alt="Special Memory Together" class="epilogue-dominant-img" loading="lazy" width="640" height="1312">
+                    <div class="epilogue-photo-vignette" aria-hidden="true"></div>
+                </div>
+
+                <!-- Right Side: Heartfelt Birthday Message (50% Width) -->
+                <div class="epilogue-content-pane">
+                    <div class="epilogue-icon" aria-hidden="true"></div>
+                    <h2 class="epilogue-title">
+                        Happy Birthday Once Again, <br>
+                        <em>Dear Uzma.</em>
+                    </h2>
+                    <p class="epilogue-message">
+                        "Here's to many more beautiful memories, endless laughter, and boundless happiness together."
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- ======================================================================
+         FULLSCREEN LIGHTBOX MODAL
+         ====================================================================== -->
+    <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Fullscreen Photo Viewer">
+        <button type="button" class="lightbox-close-btn" id="lightboxClose" title="Close Viewer (Esc)" aria-label="Close Viewer">✕</button>
+        <button type="button" class="lightbox-nav-btn lightbox-prev" id="lightboxPrev" title="Previous Photo (←)" aria-label="Previous Photo">‹</button>
+        <button type="button" class="lightbox-nav-btn lightbox-next" id="lightboxNext" title="Next Photo (→)" aria-label="Next Photo">›</button>
+
+        <div class="lightbox-dialog">
+            <div class="lightbox-image-container">
+                <img src="" alt="" id="lightboxImg">
+            </div>
+            <div class="lightbox-caption-box">
+                <span class="lightbox-caption-text" id="lightboxCaption"></span>
+                <span class="lightbox-counter" id="lightboxCounter"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Controller -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
